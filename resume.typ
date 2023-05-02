@@ -21,5 +21,5 @@ B.A.Sc Honours Electrical Engineering Candidate
 = Languages
 
 #for line in (languages.split("\n")) {
-    repr(line)
+    list(line)
 }
