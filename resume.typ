@@ -1,4 +1,17 @@
 #set text(font: ("Lato"), weight: "light")
+#set page(fill: rgb("222222"))
+#set text(fill: rgb("fdfdfd"))
+
+#import "conf.typ": conf
+#show : heading => conf(
+    name : (
+        first : "Kunal",
+        last  : "Chandan",
+        email : "kchandan\@uwaterloo.ca",
+        caption : "B.A.SC in Electrical Engineering",
+    )
+)
+
 Kunal Chandan
 
 B.A.Sc Honours Electrical Engineering Candidate
@@ -20,6 +33,15 @@ B.A.Sc Honours Electrical Engineering Candidate
 #let languages = read("languages.txt")
 = Languages
 
+// #list(languages.split("\n"))
+
+= Languages
 #for line in (languages.split("\n")) {
-    list(line)
+    if line.contains("^") {
+        line
+        // - content(line)
+    }
+    else {
+        // + content(line)
+    }
 }
