@@ -1,14 +1,17 @@
 #set text(font: ("Lato"), weight: "light")
-#set page(fill: rgb("222222"))
-#set text(fill: rgb("fdfdfd"))
+// #set page(fill: rgb("222222"))
+// #set text(fill: rgb("fdfdfd"))
 
 #import "conf.typ": conf
 #show : heading => conf(
     name : (
         first : "Kunal",
         last  : "Chandan",
-        email : "kchandan\@uwaterloo.ca",
-        caption : "B.A.SC in Electrical Engineering",
+        email : "kchandan@uwaterloo.ca",
+        phone : "647-785-1313",
+        github : "kunalchandan",
+        linkedin : "kunal-chandan",
+        caption : "B.A.Sc Honours Electrical and Computer Engineering",
     )
 )
 
@@ -23,10 +26,6 @@ B.A.Sc Honours Electrical Engineering Candidate
   radius: 6pt
 )
 
-#link("mailto:kchandan@uwaterloo.ca")[kchandan\@uwaterloo.ca]
-#link("https://www.linkedin.com/in/kunal-chandan/")[linkedin/kunal-chandan]
-#link("http://github.com/kunalchandan")[github/kunalchandan]
-#link("tel:6477851313")[647-785-1313]
 
 
 #set list(marker: ([•], [--]))
