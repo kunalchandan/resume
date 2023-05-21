@@ -1,13 +1,13 @@
 #set text(font: ("Lato"), weight: "light")
 #set page(
-    // fill: rgb("222222"),
+    fill: rgb("222222"),
     margin: (
         x : 4em,
         y : 2em,
     )
 
     )
-// #set text(fill: rgb("fdfdfd")s)
+#set text(fill: rgb("fdfdfd"))
 
 #import "conf.typ": page_heading
 
@@ -25,55 +25,63 @@
     )
 )
 
-// #show: text("sfasj k djla k ")
 
-
-sdklfjs
-sdlkfj
-
-sdf
-
-d
-
-dsfsdf
-
-
-sdfsdf
-
-sdf
-
-sdf
-asdfas
-sd
-#stack(
-        dir: ltr,
-        rect(fill: rgb("#000000"), height: 30pt, width: 40pt),
-        rect(fill: rgb("#000000"), height: 30pt, width: 120pt),
-        rect(fill: rgb("#000000"), height: 30pt, width: 90pt),
-    )
-
-#let cell = rect.with(
-  inset: 8pt,
-  fill: rgb("e4e5ea"),
-  width: 100%,
-  radius: 6pt
-)
-
-
-
-#set list(marker: ([•], [--]))
 #let languages = read("languages.txt")
 = Languages
+- C++
+- Rust
+    - nalgebra
+    - Rayon
+- Python
+    - Pandas
+    - Numpy
+    - Scipy
+    - TensorFlow
+    - Pytorch
+    - OpenCV
+- MATLAB
+- Go
+- SQL
+- Verilog
+- RISC-V
+- Shell
+- LaTeX
 
-// #list(languages.split("\n"))
 
-= Languages
-#for line in (languages.split("\n")) {
-    if line.contains("^") {
-        line
-        // - content(line)
-    }
-    else {
-        // + content(line)
-    }
-}
+// #list(
+//     [C++],
+//     [Rust
+//     #list(
+//         [nalgebra],
+//         [Rayon],
+//     )],
+//     [Python
+//     #list(
+//         [Pandas],
+//         [Numpy],
+//         [Scipy],
+//         [TensorFlow],
+//         [Pytorch],
+//         [OpenCV],
+//     )],
+//     [MATLAB],
+//     [Go],
+//     [SQL],
+//     [Verilog],
+//     [RISC-V],
+//     [Shell],
+//     [LaTeX],
+// )
+
+// = Languages
+// #for line in (languages.split("\n")) {
+//     if line.contains("^") {
+//         line.slice(line.position("^") + 1)
+//         // - content(line)
+//     }
+//     else {
+//         // + content(line)
+//     }
+//     linebreak()
+// }
+
