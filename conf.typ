@@ -116,15 +116,20 @@
     location : "",
     description : (),
 ) = {
-
-    box(heading(
-        level: 2,
-        title
-        )) + " | " + _company_fmt(company)
-    linebreak()
-    _dates_fmt(dates.start + " - " + dates.end + " | ")
-    _location_fmt(location)
-    linebreak()
+    if title != "" and company != "" {
+        box(heading(
+            level: 2,
+            title
+            )) + " | " + _company_fmt(company)
+        linebreak()
+    }
+    if dates.start != "" and dates.end != "" {
+        _dates_fmt(dates.start + " - " + dates.end + " | ")
+    }
+    if location != "" {
+        _location_fmt(location)
+        linebreak()
+    }
     _description_fmt(
         for (i, desc) in description.enumerate() {
             if type(description.at(default : "", i+1)) == "array" {
