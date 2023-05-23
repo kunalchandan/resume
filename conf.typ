@@ -1,6 +1,7 @@
 #set text(font: ("Jost"), weight: "light")
 
 #let accent_1 = rgb("#57058B")
+#let accent_10 = rgb("#BE33DA")
 #let accent_2 = rgb("#787878")
 
 #let page_heading(
@@ -9,6 +10,7 @@
 ) = {
     set align(center)
     text(
+        weight: "extralight",
         size: 2em,
     )[
         #name.first
@@ -62,17 +64,9 @@
 }
 
 
-
-#let _title_fmt(title) = {
-    text(
-        weight: "black",
-        title
-        )
-}
-
 #let _company_fmt(company) = {
     text(
-        weight: "medium",
+        weight: "regular",
         size: 10pt,
         fill: accent_2,
         company
@@ -81,7 +75,7 @@
 
 #let _dates_fmt(dates) = {
     text(
-        weight: "medium",
+        weight: "regular",
         size: 10pt,
         fill: accent_2,
         dates
@@ -90,7 +84,7 @@
 
 #let _location_fmt(location) = {
     text(
-        weight: "medium",
+        weight: "regular",
         size: 10pt,
         fill: accent_2,
         location
@@ -108,6 +102,7 @@
 /// Experience call all sub-bullets given by arrays must have a preceeding content
 #let experience(
     title : "",
+    website : "",
     company : "",
     dates : (
         start : "",
@@ -116,13 +111,27 @@
     location : "",
     description : (),
 ) = {
-    if title != "" and company != "" {
+
+    if title != "" {
         box(heading(
             level: 2,
-            title
-            )) + " | " + _company_fmt(company)
+            link(website, title)
+            ))
+        if company != "" {
+            " | "
+        }
+    }
+    if company != "" {
+            _company_fmt(company)
+    }
+    if link != "" {
+        h(1em)
+        box(image("icons/Editor/link.svg", height: 1em))
+    }
+    if title != "" and company != "" {
         linebreak()
     }
+
     if dates.start != "" and dates.end != "" {
         _dates_fmt(dates.start + " - " + dates.end + " | ")
     }
