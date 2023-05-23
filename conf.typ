@@ -116,8 +116,13 @@
     _location_fmt(location)
     linebreak()
     _description_fmt(
-        for desc in description {
-            list(desc)
+        for (i, desc) in description.enumerate() {
+            if type(description.at(default : "", i+1)) == "array" {
+                list(desc + "" + description.at(i+1).map(list).join())
+            } else if type(desc) == "array" {
+            } else {
+                list(desc)
+            }
         }
     )
 }
