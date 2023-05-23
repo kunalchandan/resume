@@ -1,4 +1,7 @@
-#set text(font: ("Lato"), weight: "light")
+#set text(font: ("Jost"), weight: "light")
+
+#let accent_1 = rgb("#57058B")
+#let accent_2 = rgb("#787878")
 
 #let page_heading(
     name : (),
@@ -12,6 +15,7 @@
     ]
     text(
         size: 2em,
+        fill: accent_1,
         weight: "medium",
     )[
         #name.last
@@ -68,34 +72,40 @@
 
 #let _company_fmt(company) = {
     text(
-        weight: "black",
+        weight: "medium",
+        size: 10pt,
+        fill: accent_2,
         company
         )
 }
 
 #let _dates_fmt(dates) = {
     text(
-        weight: "black",
+        weight: "medium",
+        size: 10pt,
+        fill: accent_2,
         dates
         )
 }
 
 #let _location_fmt(location) = {
     text(
-        weight: "black",
+        weight: "medium",
+        size: 10pt,
+        fill: accent_2,
         location
         )
 }
 
 #let _description_fmt(description) = {
     text(
-        size: 0.7em,
+        size: 10pt,
         weight: "light",
         description
         )
 }
 
-
+/// Experience call all sub-bullets given by arrays must have a preceeding content
 #let experience(
     title : "",
     company : "",
