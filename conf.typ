@@ -56,3 +56,68 @@
         stroke:0.5pt,
     )
 }
+
+
+
+#let _title_fmt(title) = {
+    text(
+        weight: "black",
+        title
+        )
+}
+
+#let _company_fmt(company) = {
+    text(
+        weight: "black",
+        company
+        )
+}
+
+#let _dates_fmt(dates) = {
+    text(
+        weight: "black",
+        dates
+        )
+}
+
+#let _location_fmt(location) = {
+    text(
+        weight: "black",
+        location
+        )
+}
+
+#let _description_fmt(description) = {
+    text(
+        size: 0.7em,
+        weight: "light",
+        description
+        )
+}
+
+
+#let experience(
+    title : "",
+    company : "",
+    dates : (
+        start : "",
+        end : "",
+    ),
+    location : "",
+    description : (),
+) = {
+
+    box(heading(
+        level: 2,
+        title
+        )) + " | " + _company_fmt(company)
+    linebreak()
+    _dates_fmt(dates.start + " - " + dates.end + " | ")
+    _location_fmt(location)
+    linebreak()
+    _description_fmt(
+        for desc in description {
+            list(desc)
+        }
+    )
+}
