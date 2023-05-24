@@ -1,8 +1,11 @@
-#set text(font: ("Jost"), weight: "light")
-
+#let main_font_size = 8.5pt
+#let caption_font_size = 9pt
+#let name_font_size = 17pt
+#let heading_font_size = 11pt
 #let accent_1 = rgb("#57058B")
 #let accent_10 = rgb("#BE33DA")
 #let accent_2 = rgb("#787878")
+#set text(font: ("Jost"), weight: "extralight", size: main_font_size)
 
 #let page_heading(
     name : (),
@@ -11,12 +14,12 @@
     set align(center)
     text(
         weight: "extralight",
-        size: 2em,
+        size: name_font_size,
     )[
         #name.first
     ]
     text(
-        size: 2em,
+        size: name_font_size,
         fill: accent_1,
         weight: "medium",
     )[
@@ -24,7 +27,7 @@
     ]
     linebreak()
     text(
-        size: 1.1em,
+        size: caption_font_size,
         style: "italic",
         // fill: rgb(50%, 50%, 50%),
     )[
@@ -32,13 +35,13 @@
     ]
     linebreak()
     text(
-        size: 1em,
+        size: caption_font_size,
     )[
         // Consider replacing with a stack?
         #link("https://" + name.website)[#name.website]
         #h(2fr)
         #text(
-            size: 1.1em,
+            size: caption_font_size,
             style: "italic",
         )[
             #name.subcaption
@@ -48,7 +51,7 @@
     ]
     linebreak()
     text(
-        size: 1em,
+        size: caption_font_size,
     )[
         // Consider replacing with a stack?
         #link("https://www.github.com/" + name.github)[github/#name.github]
@@ -93,7 +96,7 @@
 
 #let _description_fmt(description) = {
     text(
-        size: 10pt,
+        size: main_font_size,
         weight: "light",
         description
         )
@@ -126,7 +129,7 @@
     }
     if website != "" {
         h(1em)
-        link(website, box(image("icons/Editor/link.svg", height: 1em)))
+        link(website, box(image("icons/Editor/link.svg", height: heading_font_size*0.7)))
     }
     if title != "" and company != "" {
         linebreak()
