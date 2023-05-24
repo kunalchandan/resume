@@ -12,6 +12,7 @@
 #import "conf.typ": page_heading, experience, accent_1, accent_10, heading_font_size, main_font_size
 
 #set text(font: ("Jost"), weight: "light", size: main_font_size,)
+#set list(marker: ([--], [-]))
 
 #show heading: it => {
     if it.level == 1 {
@@ -59,8 +60,8 @@
     description : (
         [Python],
         (
-            [Numpy],
-            [Pandas],
+            // [Numpy],
+            // [Pandas],
             [Scipy],
             [Flask],
             [Sympy],
@@ -134,7 +135,7 @@
     description : (
         [Multidisciplinary generalist electrical engineering skills specialist in software development at scale in data engineering with *Python* and performance critical development in *C++*],
         [Experienced electrical engineering skills with clean-room and hands-on electrical lab-work],
-        [Strong electrical engineering foundation through coursework in semiconductor device physics, RF devices, computer architecture, control systems, and IC design]
+        [Strong electrical engineering foundation through coursework in semiconductor device physics, RF devices, control systems, and IC design]
     )
 )
 
@@ -167,7 +168,7 @@
     ),
     location : "Waterloo, ON",
     description : (
-        [Aimed to do fault analysis of autonomous vehicles, used *Python* and logged to a *PostgreSQL* server],
+        [Fault analysis of autonomous vehicles, used *Python*, logged to *PostgreSQL* server],
         [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of failures]
     )
 )
@@ -184,7 +185,7 @@
         [Defined resource allocation over memory & processing units of tensors on Groq’s TPU],
         [Developed *Python* & *C++* API/firmware to improve streaming of instructions & data],
         [Used *PyBind11* for interoperability of *C++* & *Python* API/firmware for migration from older codebase],
-        [Used timing analysis to prevent stream conflicts & allowed for interleaving of streams],
+        // [Used timing analysis to prevent stream conflicts & allowed for interleaving of streams],
     )
 )
 
@@ -197,8 +198,8 @@
     ),
     location : "Waterloo, ON",
     description : (
-        [Designed collision free non-cryptographic hash function (NCHF) in Galois Field 2 (GF-2)],
-        [Analyzed NCHF with linear algebra, SAT & self-designed GF(2) matrix solver to verify properties],
+        // [Designed collision free non-cryptographic hash function (NCHF) in Galois Field 2 (GF-2)],
+        [Designed and Analyzed non-cryptographic hash function with linear algebra, SAT & self-designed GF(2) matrix solver to verify properties],
         [Benchmarked the optimized SIMD hashing function against existing NCHFs (*Rust*, *C++*)],
         [Implemented novel border detection algorithm in *Go* using *probabilistic data structures* to maximize performance with Go-routines],
     )
@@ -219,35 +220,37 @@
     )
 )
 
-#let robarts = experience(
-    title : "Software Engineer - Bioinformatics",
-    company : "Robarts Research Institute",
-    dates : (
-        start : "Jan 2021",
-        end : "Apr 2021",
-    ),
-    location : "London, ON",
-    description : (
-        [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
-        [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
-        [Developed software for migration of genetic analysis database from GRCh37 to GRCh38],
-    )
-)
+// #let robarts = experience(
+//     title : "Software Engineer - Bioinformatics",
+//     company : "Robarts Research Institute",
+//     dates : (
+//         start : "Jan 2021",
+//         end : "Apr 2021",
+//     ),
+//     location : "London, ON",
+//     description : (
+//         // [Developed software for migration of genetic analysis database from GRCh37 to GRCh38],
+//         // [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
+//         // [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
+//     )
+// )
 
 #let oicr = experience(
     title : "Software Engineer - Bioinformatics",
     website : "https://github.com/oicr-gsi/dashi",
     company : "Ontario Institute for Cancer Research",
     dates : (
-        start : "Jan 2019",
-        end : "Apr 2019",
+        start : "Jan 2019 - Apr 2019",
+        end : "Jan 2021 - Apr 2021",
     ),
     location : "Toronto, ON",
     description : (
-        [Project lead of new statistical analysis tool for all future studies at OICR-GSI],
+        // [Project lead of new statistical analysis tool for all future studies at OICR-GSI],
+        [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
+        [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
         [Designed genomics pipelines for visualization, cleaning, and analysis; interfacing with existing *R*, *Perl*, and *Shell* pipelines],
         [Wrote future-proof and extensible code to process big datasets (*Pandas*, *Shell*)],
-        [Open-sourced project and version controlled with *Git*; created extensive documentation],
+        // [Open-sourced project and version controlled with *Git*; created extensive documentation],
     )
 )
 
@@ -292,59 +295,98 @@
     )
 
 )
-
-#let cell = rect.with(
-//   inset: 8pt,
-//   fill: rgb("888888"),
-  width: 100%,
-//   radius: 6pt
-)
-
-#let mini_column(body) = style(styles => {
-    let size = measure(body, styles)
-    [
-        #body
-        // #size.width
-        // #size.height
-    ]
-//   cell(height : 88%)[#body #size.width]
-})
-
-#grid(
-    columns: (12%, 44%, 44%),
-    rows: (auto,),
-    gutter: 3pt,
-    mini_column[
+#box(height: 2.9cm,
+    columns(6, gutter: 5pt)[
         = Software
         #software
+        #colbreak()
         = Languages
         #languages
+        #colbreak()
         = Lab Skills
         #lab_tools
-        = Interests
-        #interests
-        = Award
-        #awards
-        ],
-    mini_column[
-        = Summary of Qualifications
-        #Summary_Quals
-        = Experience
-        #uw_wong
-        #groq_inc
-        #uw_yash
-        #huawei
-        ],
-    mini_column[
-        = Experience
-        #mappedin
-        #robarts
-        #oicr
-        = Projects
-        #hearing_aid
-        #risc_v_core
-        #ray_tracing
-        // = Education
-        // #education
-        ],
+        // #colbreak()
+        // = Interests
+        // #interests
+        // = Award
+        // #awards
+    ]
 )
+
+    = Summary of Qualifications
+    #Summary_Quals
+#box(height: 19.5cm,
+    columns(2, gutter: 10pt)[
+    = Experience
+    #uw_wong
+    #groq_inc
+    #uw_yash
+    #huawei
+    #mappedin
+    #oicr
+    = Projects
+    #hearing_aid
+    #risc_v_core
+    #ray_tracing
+
+    ]
+)
+
+
+
+// #let cell = rect.with(
+// //   inset: 8pt,
+// //   fill: rgb("888888"),
+//   width: 100%,
+// //   radius: 6pt
+// )
+
+// #let mini_column(body) = style(styles => {
+//     let size = measure(body, styles)
+//     [
+//         #body
+//         // #size.width
+//         // #size.height
+//     ]
+// //   cell(height : 88%)[#body #size.width]
+// })
+
+// #grid(
+//     columns: (18%, 82%),
+//     // columns: (12%, 44%, 44%),
+//     rows: (auto,),
+//     gutter: 3pt,
+//     mini_column[
+//         = Software
+//         #software
+//         = Languages
+//         #languages
+//         = Lab Skills
+//         #lab_tools
+//         = Interests
+//         #interests
+//         = Award
+//         #awards
+//         ],
+//     mini_column[
+//         = Summary of Qualifications
+//         #Summary_Quals
+//         = Experience
+//         #uw_wong
+//         #groq_inc
+//         #uw_yash
+//         #huawei
+//     //     ],
+//     // mini_column[
+//     //     = Experience
+//         #mappedin
+//         #robarts
+//         #oicr
+//         = Projects
+//         #hearing_aid
+//         #risc_v_core
+//         #ray_tracing
+//         // = Education
+//         // #education
+//         ],
+// )
