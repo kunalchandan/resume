@@ -2,7 +2,7 @@
 #set page(
     // fill: rgb("222222"),
     margin: (
-        x : 4em,
+        x : 2.5em,
         y : 2em,
     )
 
@@ -25,7 +25,11 @@
     else if it.level == 2 {
         // Since smallcaps aren't implemented yet for fonts without scmp, use upper
         // smallcaps(it)
-        text(weight: "extralight", upper(it))
+        text(
+            weight: "extralight",
+            spacing: 100%,
+            upper(it)
+            )
     }
     else if it.level == 3 {
         text(weight: "medium", it)
@@ -119,11 +123,53 @@
     ),
     location : "Waterloo, ON",
     description : (
-        [Developed research plan for packaging of $mu$LEDs onto TFT packplanes],
-        ([skldj f], [ssf]),
-        [Fabrication],
+        [Developed research plan for packaging of $mu$LEDs onto TFT packplanes using indium electroplating],
+        // ([skldj f], [ssf]),
+        [Characterized results using *SEM* and *X-Ray Spectroscopy*,],
         [Simulation],
         ),
+)
+
+#let risc_v_core = experience(
+    title : "Pipelined Risc-V Core",
+    description : (
+        [Designed 5-stage pipelined *RISC-V* 32-bit core in *Verilog* using only synthesizable constructs],
+        [Core synthesized on FPGA and successfully ran programs. Testbenches used to ensure cycle accuracy],
+
+    )
+)
+
+#let hearing_aid = experience(
+    title : "Beamforming Hearing Aid PCB",
+    website : "https://chandan.one/posts/mic-array/",
+    description : (
+        [Designed 4 channel microphone array PCB in *KiCAD*, PCB does active analog bandpass filtering, differential amplification, and multichannel *ADC* over *SPI* to Raspberry Pi],
+        [R-Pi does compression and sends audio over *Flask* server for further digital filtering and beamforming],
+        [*Pytorch* to create quantized voice isolation model and minimize latency and maintain performance],
+        [Used *multiprocessing*, *asyncio*, and *websockets* to maximize throughput and performance],
+    )
+)
+
+#let ray_tracing = experience(
+    title : "Ray Tracing Engine",
+    website : "https://github.com/kunalchandan/ToyTracer/",
+    description : (
+        [Implemented 3D recursive path-tracing for arbitrary materials on basic geometric shapes],
+        // [Used traits],
+        [Used *nalgebra* for arbitrary rotations & positions of camera & objects],
+        [Parallel processing of ray-tracing using *rayon* yielding *\~10X* performance speed-up],
+
+    )
+)
+
+#let education = experience(
+    title : "University of Waterloo \nB.A.Sc Electrical & Computer Engineering 23'",
+    description : (
+        [Electronic devices, Semiconductor physics, Analog/Digital integrated circuits],
+        [Analog/Digial/Multivariable control systems],
+        [Radio frequency and microwave circuits]
+    )
+
 )
 
 #let cell = rect.with(
@@ -134,13 +180,17 @@
 )
 
 #let mini_column(body) = style(styles => {
-  let size = measure(body, styles)
-  [#body #size.width]
+    let size = measure(body, styles)
+    [
+        #body
+        #size.width
+        #size.height
+    ]
 //   cell(height : 88%)[#body #size.width]
 })
 
 #grid(
-    columns: (20%, 80%),
+    columns: (18%, 82%),
     rows: (auto,),
     gutter: 3pt,
     mini_column[
@@ -154,6 +204,10 @@
         = Experience
         #UW_experience_1
         = Projects
-        #UW_experience_1
+        #hearing_aid
+        #risc_v_core
+        #ray_tracing
+        = Education
+        #education
         ],
 )

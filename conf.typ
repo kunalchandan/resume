@@ -124,9 +124,9 @@
     if company != "" {
             _company_fmt(company)
     }
-    if link != "" {
+    if website != "" {
         h(1em)
-        box(image("icons/Editor/link.svg", height: 1em))
+        link(website, box(image("icons/Editor/link.svg", height: 1em)))
     }
     if title != "" and company != "" {
         linebreak()
