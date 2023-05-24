@@ -1,4 +1,3 @@
-#set text(font: ("Jost"), weight: "light", size: 10pt,)
 #set page(
     // fill: rgb("222222"),
     margin: (
@@ -10,13 +9,15 @@
 
 
 
-#import "conf.typ": page_heading, experience, accent_1, accent_10
+#import "conf.typ": page_heading, experience, accent_1, accent_10, heading_font_size, main_font_size
 
+#set text(font: ("Jost"), weight: "light", size: main_font_size,)
 
 #show heading: it => {
     if it.level == 1 {
         text(
             weight: "medium",
+            size : heading_font_size,
             fill : accent_1,
             it
             )
@@ -25,8 +26,8 @@
         // Since smallcaps aren't implemented yet for fonts without scmp, use upper
         // smallcaps(it)
         text(
-            weight: "extralight",
-            size: 12pt,
+            weight: "regular",
+            size: heading_font_size,
             spacing: 100%,
             upper(it)
             )
@@ -96,9 +97,9 @@
 
 #let awards = experience(
     description : (
-        [2022 - Baylis Medical Capstone Design Award],
-        [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
-        [2022 - #link("https://qnfcf.uwaterloo.ca/", "G2N Cleanroom Certification")],
+        [Baylis Medical Capstone Design Award],
+        // [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
+        // [2022 - #link("https://qnfcf.uwaterloo.ca/", "G2N Cleanroom Certification")],
     )
 )
 
@@ -293,24 +294,24 @@
 )
 
 #let cell = rect.with(
-  inset: 8pt,
+//   inset: 8pt,
 //   fill: rgb("888888"),
   width: 100%,
-  radius: 6pt
+//   radius: 6pt
 )
 
 #let mini_column(body) = style(styles => {
     let size = measure(body, styles)
     [
         #body
-        #size.width
-        #size.height
+        // #size.width
+        // #size.height
     ]
 //   cell(height : 88%)[#body #size.width]
 })
 
 #grid(
-    columns: (18%, 82%),
+    columns: (12%, 44%, 44%),
     rows: (auto,),
     gutter: 3pt,
     mini_column[
@@ -322,6 +323,8 @@
         #lab_tools
         = Interests
         #interests
+        = Award
+        #awards
         ],
     mini_column[
         = Summary of Qualifications
@@ -331,6 +334,9 @@
         #groq_inc
         #uw_yash
         #huawei
+        ],
+    mini_column[
+        = Experience
         #mappedin
         #robarts
         #oicr
@@ -338,9 +344,7 @@
         #hearing_aid
         #risc_v_core
         #ray_tracing
-        = Education
-        #education
-        = Awards and Certifications
-        #awards
+        // = Education
+        // #education
         ],
 )

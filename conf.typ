@@ -1,5 +1,5 @@
-#let main_font_size = 8.5pt
-#let caption_font_size = 9pt
+#let main_font_size = 9pt
+#let caption_font_size = 10pt
 #let name_font_size = 17pt
 #let heading_font_size = 11pt
 #let accent_1 = rgb("#57058B")
@@ -121,7 +121,9 @@
             link(website, title)
             ))
         if company != "" {
-            " | "
+            // For 2 column you'll probably want to change this
+            linebreak()
+            // " | "
         }
     }
     if company != "" {
