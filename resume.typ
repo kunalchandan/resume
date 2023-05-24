@@ -54,55 +54,62 @@
     )
 )
 
-#let languages = [
-= Languages
-- Python
-    - Numpy
-    - Pandas
-    - Scipy
-    - Sympy
-    - TensorFlow
-    - Pytorch
-- C++
-- SQL
-- Rust
-    - nalgebra
-    - Rayon
-- MATLAB
-- Go
-- Verilog
-- RISC-V
-- Shell
-- LaTeX
-]
+#let languages = experience(
+    description : (
+        [Python],
+        (
+            [Numpy],
+            [Pandas],
+            [Scipy],
+            [Sympy],
+            [TensorFlow],
+            [Pytorch],
+        ),
+        [C++],
+        [SQL],
+        [Rust],
+        (
+            [nalgebra],
+            [Rayon],
+        ),
+        [MATLAB],
+        [Go],
+        [Verilog],
+        [RISC-V],
+        [Shell],
+        [LaTeX],
+    )
+)
 
 
-#let software = [
-= Software
-- KiCAD
-- LTSpice/PySpice
-- Cadence
-- LayoutEditor
-- Quartus Prime
-- Linux
-]
+#let software = experience(
+    description : (
+        [KiCAD],
+        [LTSpice/PySpice],
+        [Cadence],
+        [LayoutEditor],
+        [Quartus Prime],
+        [Linux],
+    )
+)
 
 
-#let lab_tools = [
-= Lab Skills
-- PCB Design
-- Oscilliscope
-- Network Analyzer
-- Probe Station
-- Wirebonder
-- Diebonder
-- Plasma Cleaner & Asher
-- Dicing saw
-- HMDS Oven
-- Spincoater
-- SEM
-- X-Ray Spectroscopy
-]
+#let lab_tools = experience(
+    description: (
+        [PCB Design],
+        [Oscilliscope],
+        [Network Analyzer],
+        [Probe Station],
+        [Wirebonder],
+        [Diebonder],
+        [Plasma Cleaner & Asher],
+        [Dicing saw],
+        [HMDS Oven],
+        [Spincoater],
+        [SEM],
+        [X-Ray Spectroscopy],
+        )
+)
 
 
 #let Summary_Quals = experience(
@@ -194,8 +201,11 @@
     rows: (auto,),
     gutter: 3pt,
     mini_column[
+        = Software
         #software
+        = Languages
         #languages
+        = Lab Skills
         #lab_tools
         ],
     mini_column[
