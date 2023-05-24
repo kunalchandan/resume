@@ -2,6 +2,8 @@
 Written in typst.
 ## Preview
 
+![resume preview](./resume-1.png)
+
 
 
 ## Build instructions
