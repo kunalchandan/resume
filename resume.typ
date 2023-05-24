@@ -315,7 +315,7 @@
 
     = Summary of Qualifications
     #Summary_Quals
-#box(height: 19.5cm,
+#box(height: 14.5cm,
     columns(2, gutter: 10pt)[
     = Experience
     #uw_wong
@@ -324,11 +324,15 @@
     #huawei
     #mappedin
     #oicr
+    ]
+)
+
+#box(height: 5cm,
+    columns(2, gutter: 10pt)[
     = Projects
     #hearing_aid
     #risc_v_core
     #ray_tracing
-
     ]
 )
 
