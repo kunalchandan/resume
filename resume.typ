@@ -1,12 +1,11 @@
-#set text(font: ("Jost"), weight: "light")
+#set text(font: ("Jost"), weight: "light", size: 10pt,)
 #set page(
     // fill: rgb("222222"),
     margin: (
         x : 2.5em,
         y : 2em,
     )
-
-    )
+)
 // #set text(fill: rgb("fdfdfd"))
 
 
@@ -27,6 +26,7 @@
         // smallcaps(it)
         text(
             weight: "extralight",
+            size: 12pt,
             spacing: 100%,
             upper(it)
             )
@@ -61,6 +61,7 @@
             [Numpy],
             [Pandas],
             [Scipy],
+            [Flask],
             [Sympy],
             [TensorFlow],
             [Pytorch],
@@ -93,6 +94,22 @@
     )
 )
 
+#let awards = experience(
+    description : (
+        [2022 - Baylis Medical Capstone Design Award],
+        [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
+        [2022 - #link("https://qnfcf.uwaterloo.ca/", "G2N Cleanroom Certification")],
+    )
+)
+
+#let interests = experience(
+    description : (
+        [Cycling],
+        [Rock Climbing],
+        [Juggling],
+    )
+)
+
 
 #let lab_tools = experience(
     description: (
@@ -120,7 +137,7 @@
     )
 )
 
-#let UW_experience_1 = experience(
+#let uw_wong = experience(
     title : "Research Electrical Engineer",
     website : "https://chandan.one/posts/Report/",
     company : "University of Waterloo",
@@ -131,10 +148,106 @@
     location : "Waterloo, ON",
     description : (
         [Developed research plan for packaging of $mu$LEDs onto TFT packplanes using indium electroplating],
-        // ([skldj f], [ssf]),
         [Characterized results using *SEM* and *X-Ray Spectroscopy*,],
-        [Simulation],
+        [Designed custom PCBs in *KiCAD* for driving small $mu$LED active/passive matrix displays using *STM32* microcontroller and accompanying analog circuitry],
+        [Designed characterization setups for $mu$LEDs in *Fusion360* and *Arduino* interfaced with *Python*],
+        [Validated flip-chip diebonding results with thermal and electrical simulations in *MATLAB*],
+        [Designed and validated new layouts to improve mechanical and electrical performance],
         ),
+)
+
+#let uw_yash = experience(
+    title : "Software Engineer - Autonomous Vehichles",
+    website : "https://github.com/kunalchandan/CL2-AutoDetective",
+    company : "University of Waterloo",
+    dates : (
+        start : "Jan 2023",
+        end : "Apr 2023",
+    ),
+    location : "Waterloo, ON",
+    description : (
+        [Aimed to do fault analysis of autonomous vehicles, used *Python* and logged to a *PostgreSQL* server],
+        [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of failures]
+    )
+)
+
+#let groq_inc = experience(
+    title : "Software Engineer - Firmware",
+    company : "Groq Inc.",
+    dates : (
+        start : "Jan 2022",
+        end : "Apr 2022",
+    ),
+    location : "Mountain View, CA, USA",
+    description : (
+        [Defined resource allocation over memory & processing units of tensors on Groq’s TPU],
+        [Developed *Python* & *C++* API/firmware to improve streaming of instructions & data],
+        [Used *PyBind11* for interoperability of *C++* & *Python* API/firmware for migration from older codebase],
+        [Used timing analysis to prevent stream conflicts & allowed for interleaving of streams],
+    )
+)
+
+#let huawei = experience(
+    title : "Software Engineer - Digital Compression",
+    company : "Huawei Technologies",
+    dates : (
+        start : "May 2020",
+        end : "Aug 2020",
+    ),
+    location : "Waterloo, ON",
+    description : (
+        [Designed collision free non-cryptographic hash function (NCHF) in Galois Field 2 (GF-2)],
+        [Analyzed NCHF with linear algebra, SAT & self-designed GF(2) matrix solver to verify properties],
+        [Benchmarked the optimized SIMD hashing function against existing NCHFs (*Rust*, *C++*)],
+        [Implemented novel border detection algorithm in *Go* using *probabilistic data structures* to maximize performance with Go-routines],
+    )
+)
+
+#let mappedin = experience(
+    title : "Software Engineer - Machine Learning",
+    company : "MappedIn",
+    dates : (
+        start : "Sept 2019",
+        end : "Dec 2019",
+    ),
+    location : "Waterloo, ON",
+    description : (
+        [Designed data pipelines for cleaning & analysis; integrated new *SQL* data warehouse],
+        [Increased prediction accuracy from *40%* to *80%* on existing *LSTM* models with feature engineering, hyperparameter optimization, & automated data cleaning (*Python*, *SQL*)],
+        [Created *Embeddings + SVM + Random Forest* ensemble models to replace existing *LSTM* models, reducing inference costs *2X* while maintaining prediction accuracy],
+    )
+)
+
+#let robarts = experience(
+    title : "Software Engineer - Bioinformatics",
+    company : "Robarts Research Institute",
+    dates : (
+        start : "Jan 2021",
+        end : "Apr 2021",
+    ),
+    location : "London, ON",
+    description : (
+        [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
+        [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
+        [Developed software for migration of genetic analysis database from GRCh37 to GRCh38],
+    )
+)
+
+#let oicr = experience(
+    title : "Software Engineer - Bioinformatics",
+    website : "https://github.com/oicr-gsi/dashi",
+    company : "Ontario Institute for Cancer Research",
+    dates : (
+        start : "Jan 2019",
+        end : "Apr 2019",
+    ),
+    location : "Toronto, ON",
+    description : (
+        [Project lead of new statistical analysis tool for all future studies at OICR-GSI],
+        [Designed genomics pipelines for visualization, cleaning, and analysis; interfacing with existing *R*, *Perl*, and *Shell* pipelines],
+        [Wrote future-proof and extensible code to process big datasets (*Pandas*, *Shell*)],
+        [Open-sourced project and version controlled with *Git*; created extensive documentation],
+    )
 )
 
 #let risc_v_core = experience(
@@ -147,7 +260,7 @@
 )
 
 #let hearing_aid = experience(
-    title : "Beamforming Hearing Aid PCB",
+    title : "Beamforming Hearing Aid",
     website : "https://chandan.one/posts/mic-array/",
     description : (
         [Designed 4 channel microphone array PCB in *KiCAD*, PCB does active analog bandpass filtering, differential amplification, and multichannel *ADC* over *SPI* to Raspberry Pi],
@@ -207,17 +320,27 @@
         #languages
         = Lab Skills
         #lab_tools
+        = Interests
+        #interests
         ],
     mini_column[
         = Summary of Qualifications
         #Summary_Quals
         = Experience
-        #UW_experience_1
+        #uw_wong
+        #groq_inc
+        #uw_yash
+        #huawei
+        #mappedin
+        #robarts
+        #oicr
         = Projects
         #hearing_aid
         #risc_v_core
         #ray_tracing
         = Education
         #education
+        = Awards and Certifications
+        #awards
         ],
 )
