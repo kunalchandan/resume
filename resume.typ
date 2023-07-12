@@ -100,7 +100,7 @@
     description : (
         [Baylis Medical Capstone Design Award],
         // [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
-        // [2022 - #link("https://qnfcf.uwaterloo.ca/", "G2N Cleanroom Certification")],
+        // [2022 - #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N Cleanroom Certification")],
     )
 )
 
