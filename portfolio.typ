@@ -2,21 +2,22 @@
     margin: (
         x : 2.5em,
         y : 2em,
-    )
+    ),
+    height: 19cm
 )
 
 
 
 #import "conf.typ": page_heading, experience, accent_1, accent_10, heading_font_size, main_font_size
 
-#set text(font: ("Jost"), weight: "light", size: main_font_size,)
+#set text(font: ("Jost"), weight: "light", size: main_font_size + 3pt,)
 #set list(marker: ([--], [-]))
 
 #show heading: it => {
     if it.level == 1 {
         text(
             weight: "medium",
-            size : heading_font_size,
+            size : heading_font_size + 2pt,
             fill : accent_1,
             it
             )
@@ -26,13 +27,17 @@
         // smallcaps(it)
         text(
             weight: "regular",
-            size: heading_font_size,
+            size: heading_font_size + 2pt,
             spacing: 100%,
             upper(it)
             )
     }
     else if it.level == 3 {
-        text(weight: "medium", it)
+        text(
+            weight: "medium",
+            size: heading_font_size + 2pt,
+            it
+            )
     } else {
         it
     }
@@ -82,6 +87,7 @@
 
 #let certifications = experience(
     description : (
+        [2023 - USA TN Visa Holder],
         [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
         [2022 - #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N Cleanroom Certification")],
     )
@@ -103,7 +109,7 @@
     )
 )
 
-#let risc_v_core = experience(
+#let analog_filters = experience(
     title : "Realizable Analog Filters",
     website : "https://chandan.one/posts/filter/",
     description : (
@@ -123,8 +129,20 @@
 )
 
 
+#let compiler = experience(
+    title : "Compiler For Novel Language",
+    website : "https://github.com/kunalchandan/RajLang/",
+    description : (
+        [Written in *C++* to support basic arithmetic functions, arrays, maps, and functions as first order members],
+        [Used *CMake* to manage project and dependencies, *Catch* for unit and end-to-end testing],
+        [Used *Boost* to manage graph datastructures and vizualization of Abstract Syntax Tree (AST)],
+        [Targetting *LLVM IR* to allow for cross-platform compatability],
+    )
+)
+
+
 #let mandelbrot_gen = experience(
-    title : "Mandelbrot Generator",
+    title : "GPU Mandelbrot Generator",
     website : "https://chandan.one/posts/CUDA/",
     description : (
         [Fractal generator written in *C++* using *CUDA*],
@@ -190,14 +208,17 @@
     ]
 )
 
-#box(height: 23cm,
+#box(height: 12cm,
     columns(2, gutter: 10pt)[
     = Hardware Projects
     #hearing_aid
     #risc_v_core
+    #analog_filters
+    #colbreak()
     = Software Projects
     #ray_tracing
     #go_sequencer
+    #compiler
     #mandelbrot_gen
     ]
 )
