@@ -47,7 +47,7 @@
         first : "Kunal",
         last  : "Chandan",
         email : "kchandan@uwaterloo.ca",
-        phone : "647-785-1313",
+        phone : "814-807-7652",
         github : "kunalchandan",
         linkedin : "kunal-chandan",
         caption : "University of Waterloo",
@@ -99,8 +99,8 @@
 #let awards = experience(
     description : (
         [Baylis Medical Capstone Design Award],
-        // [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
-        // [2022 - #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N Cleanroom Certification")],
+        [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
+        [2022 - #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N Cleanroom Certification")],
     )
 )
 

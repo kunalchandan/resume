@@ -45,7 +45,7 @@
         first : "Kunal's",
         last  : "Portfolio",
         email : "kchandan@uwaterloo.ca",
-        phone : "647-785-1313",
+        phone : "814-807-7652",
         github : "kunalchandan",
         linkedin : "kunal-chandan",
         caption : "University of Waterloo",
