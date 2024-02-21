@@ -3,7 +3,7 @@
         x : 2.5em,
         y : 2em,
     ),
-    height: 19cm
+    height: 20cm
 )
 
 
@@ -87,7 +87,7 @@
 
 #let certifications = experience(
     description : (
-        [2023 - USA TN Visa Holder],
+        [2023 - Ignition Core Certified],
         [2022 - #link("https://qnfcf.uwaterloo.ca/", "QNFCF Cleanroom Certification")],
         [2022 - #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N Cleanroom Certification")],
     )
@@ -124,7 +124,7 @@
     website : "https://chandan.one/posts/GoLang-Refresher/",
     description : (
         [Perform multiple sequence alignement on DNA or amino acid sequences, *dynamic programming* and *graph theory* used to generate optimal sequence],
-        [Used Go threads to improve performance, parallelization improved performance ???x],
+        [Used Go threads to improve performance, parallelization improved performance 8x],
     )
 )
 

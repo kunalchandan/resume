@@ -50,7 +50,7 @@
         phone : "814-807-7652",
         github : "kunalchandan",
         linkedin : "kunal-chandan",
-        caption : "B.A.Sc Honours Electrical Engineering",
+        caption : "B.A.Sc Honours Electrical Engineering '23",
         // caption : "University of Waterloo",
         subcaption : "",
         // subcaption : "B.A.Sc Honours Electrical & Computer Engineering",
@@ -171,7 +171,7 @@
         [Designed and implemented automated compliance testing for PV inverters to IEEE and UL standards],
         //[],
         [Created business analytics and equipment management application, improving test equipment utilization by *20%* (*Ignition Perspective*,* Python*)],
-        [Developed *MySQL* asset management database and interlock system ensuring regulatory compliance and saving \$50K yearly],
+        [Developed *MySQL*, *Flask* asset management database and interlock system ensuring regulatory compliance and saving \$50K yearly],
         // [Improved ease of testing for technicians by adding interoperability with *Ignition*],
     )
 )
@@ -188,7 +188,7 @@
     description : (
         [Designed custom PCBs in *KiCAD* for driving small $mu$LED active/passive matrix displays using *STM32* microcontroller and accompanying circuitry],
         [Developed research plan for packaging of $mu$LEDs onto TFT packplanes using indium electroplating],
-        [Characterized results using *SEM* and *X-Ray Spectroscopy*,],
+        [Characterized results using *SEM* and *X-Ray Spectroscopy*],
         [Designed characterization setups for $mu$LEDs in *Fusion360* and *Arduino* interfaced with *Python*],
         [Validated flip-chip diebonding results with thermal and electrical simulations in *MATLAB*],
         [Designed and validated new $mu$LED layouts to improve mechanical and electrical performance],
@@ -297,7 +297,7 @@
     title : "Pipelined Risc-V Core",
     description : (
         [Designed 5-stage pipelined *RISC-V* 32-bit core in *Verilog* using only synthesizable constructs],
-        [Core synthesized on FPGA and successfully ran branching and recursive algorithms. Testbenches used to ensure cycle accuracy],
+        [Core synthesized on *FPGA* and successfully ran branching and recursive algorithms. Testbenches used to ensure cycle accuracy],
 
     )
 )
@@ -326,7 +326,7 @@
 )
 
 #let education = experience(
-    title : "University of Waterloo -- B.A.Sc Electrical Engineering",
+    title : "University of Waterloo -- B.A.Sc Electrical Engineering '23",
     description : (
         [Key Courses: Electronic devices, semiconductor physics, analog/digital integrated circuits, analog/digital/multivariable control systems],
         [Select Awards and Certifications: Baylis Medical Capstone Design Award, #link("https://qnfcf.uwaterloo.ca/", "QNFCF") and #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N") Cleanroom Certifications],
@@ -369,9 +369,9 @@
     #huawei
     #mappedin
     // #oicr
-    = Projects
-    #hearing_aid
+    = Projectspre
     #risc_v_core
+    #hearing_aid
     ]
 )
 
