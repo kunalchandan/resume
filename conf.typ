@@ -133,11 +133,12 @@
         h(1em)
         link(website, box(image("icons/Editor/link.svg", height: heading_font_size*0.7)))
     }
-    if title != "" and company != "" {
-        linebreak()
-    }
+    // if title != "" and company != "" {
+    //     linebreak()
+    // }
 
     if dates.start != "" and dates.end != "" {
+        h(1fr)
         _dates_fmt(dates.start + " - " + dates.end + " | ")
     }
     if location != "" {
@@ -155,3 +156,9 @@
         }
     )
 }
+
+// #let exp_list(title : "", items : ()) = {
+//     for value in items {
+//         value
+//     }
+// }

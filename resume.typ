@@ -171,7 +171,7 @@
         [Designed and implemented automated compliance testing for PV inverters to IEEE and UL standards],
         //[],
         [Created business analytics and equipment management application, improving test equipment utilization by *20%* (*Ignition Perspective*,* Python*)],
-        [Developed *MySQL*, *Flask* asset management database and interlock system ensuring regulatory compliance and saving \$50K yearly],
+        // [Developed *MySQL*, *Flask* asset management database and interlock system ensuring regulatory compliance and saving \$50K yearly],
         // [Improved ease of testing for technicians by adding interoperability with *Ignition*],
     )
 )
@@ -187,8 +187,8 @@
     location : "Waterloo, ON, CA",
     description : (
         [Designed custom PCBs in *KiCAD* for driving small $mu$LED active/passive matrix displays using *STM32* microcontroller and accompanying circuitry],
-        [Developed research plan for packaging of $mu$LEDs onto TFT packplanes using indium electroplating],
-        [Characterized results using *SEM* and *X-Ray Spectroscopy*],
+        [Developed research plan for packaging $mu$LEDs onto TFT backplane using indium electroplating],
+        // [Characterized results using *SEM* and *X-Ray Spectroscopy*],
         [Designed characterization setups for $mu$LEDs in *Fusion360* and *Arduino* interfaced with *Python*],
         [Validated flip-chip diebonding results with thermal and electrical simulations in *MATLAB*],
         [Designed and validated new $mu$LED layouts to improve mechanical and electrical performance],
@@ -205,8 +205,9 @@
     ),
     location : "Waterloo, ON, CA",
     description : (
-        [Fault analysis of autonomous vehicles, used *Python*, logged to *PostgreSQL* server],
-        [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of failures]
+        [Fault analysis of autonomous vehicles (AVs), causality and failure modes of AVs explored, literature reviews conducted],
+        [Causal inference and counterfactual reasoning applied to identify root cause failures],
+        [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of novel failure modes]
     )
 )
 
@@ -362,11 +363,11 @@
     = Education
     #education
     = Experience
-    #enphase
-    #uw_wong
+    #uw_yash
     #groq_inc
-    // #uw_yash
+    #uw_wong
     #huawei
+    #enphase
     #mappedin
     // #oicr
     = Projectspre
