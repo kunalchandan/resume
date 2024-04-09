@@ -156,13 +156,28 @@
     )
 )
 
+#let nvidiac = experience(
+    title : "Post-Silicon Validation Engineer",
+    website : "https://nvidia.com/",
+    company : "NVIDIA - Contractor (6 months)",
+    dates : (
+        start : "March 2024",
+        end : "Present",
+    ),
+    location : "Santa Clara, CA, USA",
+    description : (
+        [Working on *PCIe* testing for upcoming SoCs and GPUs according to PCIe 5.0 spec],
+    )
+
+)
+
 #let enphase = experience(
     title : "Electrical Engineer - Compliance",
     website : "https://enphase.com/",
     company : "Enphase Energy",
     dates : (
         start : "Aug 2023",
-        end : "Present",
+        end : "Mar 2024",
     ),
     location : "Fremont/Petaluma, CA, USA",
     description : (
@@ -196,7 +211,7 @@
 )
 
 #let uw_yash = experience(
-    title : "Software Engineer - Autonomous Vehicles",
+    title : "Data Science Research Assistant - Autonomous Vehicles",
     website : "https://github.com/kunalchandan/CL2-AutoDetective",
     company : "University of Waterloo",
     dates : (
@@ -207,7 +222,7 @@
     description : (
         [Fault analysis of autonomous vehicles (AVs), causality and failure modes of AVs explored, literature reviews conducted],
         [Causal inference and counterfactual reasoning applied to identify root cause failures],
-        [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of novel failure modes]
+        [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of novel failure modes],
     )
 )
 
@@ -299,7 +314,24 @@
     description : (
         [Designed 5-stage pipelined *RISC-V* 32-bit core in *Verilog* using only synthesizable constructs],
         [Core synthesized on *FPGA* and successfully ran branching and recursive algorithms. Testbenches used to ensure cycle accuracy],
+    )
+)
 
+#let compiler = experience(
+    title : "C++ Compiler for C++ like Language",
+    website : "https://github.com/kunalchandan/RajLang/",
+    description : (
+        [Wrote lexer and compiler to generate *RISC-V* assembly for custom programming language, used Spike-sim to verify correctness of assembly],
+        [Used *CMake* (build management tool), *Catch* (unit-testing framework), *Boost* (graph library/dotviz generator)],
+    )
+)
+
+#let msa_dna = experience(
+    title : "Multiple Sequence Aligner",
+    website : "https://github.com/kunalchandan/goSeq/",
+    description : (
+        [Wrote sequence aligner for novo assembly of short sequences using Progressive Alignment Construction using the Needleman-Wunsch algorithm],
+        [Written in *Go* to take advantage of light weight green threads, used greedy heuristics to reduce $O(n!)$ problem to $O(n^2)$],
     )
 )
 
@@ -307,7 +339,7 @@
     title : "Beamforming Hearing Aid System",
     website : "https://chandan.one/posts/mic-array/",
     description : (
-        [Designed 4-channel microphone array PCB with active analog bandpass filtering, differential amplification, and multichannel *ADC* over *SPI* to Raspberry Pi (*KiCAD*)],
+        [Designed 4-channel microphone array PCB with active analog bandpass filtering, diff. amp., and multichannel *ADC* over *SPI* to R-Pi (*KiCAD*)],
         [Created *Flask* server on R-Pi to compress and transfer audio data to *Pytorch* neural network for further digital filtering and beamforming],
         [Adapted and trained Pytorch quantized voice isolation model to minimize latency while maintaining desired audio quality],
         [Used *multiprocessing*, *asyncio*, and *websockets* to maximize system throughput, providing continuous audio output],
@@ -315,14 +347,12 @@
 )
 
 #let ray_tracing = experience(
-    title : "Ray Tracing Engine",
+    title : "3D Ray Tracing Engine",
     website : "https://github.com/kunalchandan/ToyTracer/",
     description : (
         [Implemented 3D recursive path-tracing for arbitrary materials on basic geometric shapes],
-        // [Used traits],
         [Used *nalgebra* for arbitrary rotations and positions of camera and objects],
-        [Parallel processing of ray-tracing using *rayon* yielding *\~10X* performance speed-up],
-
+        [Parallel processing of ray-tracing using *rayon* yielding *\~10X* performance speed-up on CPU],
     )
 )
 
@@ -331,20 +361,18 @@
     description : (
         [Key Courses: Electronic devices, semiconductor physics, analog/digital integrated circuits, analog/digital/multivariable control systems],
         [Select Awards and Certifications: Baylis Medical Capstone Design Award, #link("https://qnfcf.uwaterloo.ca/", "QNFCF") and #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N") Cleanroom Certifications],
-
     )
-
 )
 #box(height: 1.7cm,
     columns(1, gutter: 5pt)[
-        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Software:])
-        #software
+        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Libraries:])
+        #libraries
 
         #text(weight: "medium", size : heading_font_size, fill : accent_1, [Languages:])
         #languages
 
-        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Libraries:])
-        #libraries
+        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Software:])
+        #software
         // #text(weight: "medium", size : heading_font_size, fill : accent_1, [Lab Tools:])
         // #lab_tools
         // #colbreak()
@@ -359,20 +387,23 @@
     // #Summary_Quals
 #box(height: 23.6cm,
     columns(1, gutter: 10pt)[
-
-    = Education
-    #education
     = Experience
+    #nvidiac
     #uw_yash
     #groq_inc
-    #uw_wong
     #huawei
-    #enphase
-    #mappedin
+    // #enphase
+    // #mappedin
+    #uw_wong
     // #oicr
-    = Projectspre
+    = Projects
+    #compiler
+    #msa_dna
+    #ray_tracing
     #risc_v_core
     #hearing_aid
+    = Education
+    #education
     ]
 )
 
