@@ -59,10 +59,10 @@
 )
 
 #let languages = {
-    [Python, C++, SQL, Verilog, VHDL, MATLAB, Go, RISC-V]
+    [Python (*PyTorch*, Numpy, Pandas, Flask), C++ (*CUDA*, Boost), MATLAB, Rust, Go, SQL, RISC-V, Verilog]
 }
 #let libraries = {
-    [Numpy, Pandas, PyTorch, Boost, FastAPI, Flask, CUDA]
+    [Boost, CUDA, PyTorch, Numpy, Pandas, Flask]
 }
 
 // #let languages = exp_list(
@@ -100,7 +100,7 @@
 
 
 #let software = {
-    [KiCAD, LTSpice, Cadence Virtuoso, LayoutEditor, Quartus Prime]
+    [Docker, Postman, REST, KiCAD, LTSpice, Cadence Virtuoso, LayoutEditor, Quartus Prime]
 }
 // #let software = experience(
 //     description : (
@@ -166,28 +166,32 @@
     ),
     location : "Santa Clara, CA, USA",
     description : (
-        [Working on *PCIe* testing for upcoming SoCs and GPUs according to PCIe 5.0 spec],
+        [Debug *PCIe 5.0* failures on current and upcoming SoCs and GPUs],
+        [Developed testing software in *Python* for validation during bringup of upcoming SoCs],
+        [Identified high speed IO failure modes during bringup of upcoming and existing products],
     )
 
 )
 
 #let enphase = experience(
-    title : "Electrical Engineer - Compliance",
+    title : "Test Automation Engineer - Electrical Compliance",
     website : "https://enphase.com/",
     company : "Enphase Energy",
     dates : (
         start : "Aug 2023",
         end : "Mar 2024",
     ),
-    location : "Fremont/Petaluma, CA, USA",
+    location : "Fremont, CA, USA",
     description : (
         // [Creating tests for compliance of microinverters and other products to *UL-1741* and *IEEE-1547*],
         // [Automation of tests in *Python* targetting lab safety and interoperability with lab instruments like powermeters, environment chambers, oscilliscopes etc.],
-        [Designed and implemented automated compliance testing for PV inverters to IEEE and UL standards],
-        //[],
-        [Created business analytics and equipment management application, improving test equipment utilization by *20%* (*Ignition Perspective*,* Python*)],
+        // [Designed and implemented automated compliance testing for PV inverters to IEEE and UL standards],
+        // [Created business analytics and equipment management application, improving test equipment utilization by *20%* (*Ignition Perspective*,* Python*)],
         // [Developed *MySQL*, *Flask* asset management database and interlock system ensuring regulatory compliance and saving \$50K yearly],
         // [Improved ease of testing for technicians by adding interoperability with *Ignition*],
+        [Devloped software systems in *Python* to test high and low voltage electrical systems under a variety of strenuous conditions],
+        [Implemented *Jenkins* to enhance testing platform reliability by reducing software errors],
+        [Engineered a logging and traceability system using *Go*, *Gin*, and *MySQL* to reduce errors during regulatory submission],
     )
 )
 
@@ -201,7 +205,7 @@
     ),
     location : "Waterloo, ON, CA",
     description : (
-        [Designed custom PCBs in *KiCAD* for driving small $mu$LED active/passive matrix displays using *STM32* microcontroller and accompanying circuitry],
+        [Designed custom PCBs in *KiCAD* for driving small $mu$LED active/passive matrix displays using *STM32* MCU],
         [Developed research plan for packaging $mu$LEDs onto TFT backplane using indium electroplating],
         // [Characterized results using *SEM* and *X-Ray Spectroscopy*],
         [Designed characterization setups for $mu$LEDs in *Fusion360* and *Arduino* interfaced with *Python*],
@@ -220,14 +224,14 @@
     ),
     location : "Waterloo, ON, CA",
     description : (
-        [Fault analysis of autonomous vehicles (AVs), causality and failure modes of AVs explored, literature reviews conducted],
         [Causal inference and counterfactual reasoning applied to identify root cause failures],
+        [Created literature review of fault analysis in autonomous vehicles (AVs)],
         [Created a dashboard using *Flask/Dash* to allow for data exploration and identification of novel failure modes],
     )
 )
 
 #let groq_inc = experience(
-    title : "Software Engineer - Firmware",
+    title : "Software Engineer - HPC Firmware",
     website  : "https://groq.com/",
     company : "Groq Inc.",
     dates : (
@@ -236,10 +240,10 @@
     ),
     location : "Mountain View, CA, USA",
     description : (
-        [Defined algorithm for resource allocation over memory and processing units of tensors on Groq’s TPU],
-        [Developed *Python* and *C++* firmware API to improve streaming of instructions and data],
-        [Used *PyBind11* for interoperability between C++ and Python firmware during codebase migration],
-        // [Used timing analysis to prevent stream conflicts & allowed for interleaving of streams],
+        [Designed algorithms for resource allocation involving SRAM and ALUs on Groq’s Tensor Processing Unit (TPU)],
+        [Developed *Python* and *C++* firmware APIs to improve throughput and minimize end to end latency of instructions and data],
+        [Leveraged timing analysis to prevent data stream conflicts while maximizing ALU utilization],
+        [Leveraged *PyBind11* for interoperability between C++ and Python firmware during codebase migration],
     )
 )
 
@@ -253,9 +257,9 @@
     location : "Waterloo, ON, CA",
     description : (
         // [Designed collision free non-cryptographic hash function (NCHF) in Galois Field 2 (GF-2)],
-        [Designed and analyzed non-cryptographic hash (NCHF) with linear algebra, SAT and self-designed $G F(2)$ matrix solver to verify properties],
-        [Benchmarked the optimized SIMD hashing function against existing NCHFs (*Rust*, *C++*)],
-        [Implemented novel border detection algorithm in *Go* using *probabilistic data structures* to maximize performance with Go-routines],
+        [Designed non-cryptographic hash functions (NCHF) with *linear algebra*, *SAT* and self-designed $G F(2)$ matrix solver to verify properties like collision resistance, distribution uniformity, and computational efficiency],
+        [Benchmarked the optimized SIMD hashing function against existing NCHFs using *Rust* and *C++*],
+        [Implemented novel border detection algorithms in *Go* using *probabilistic data structures* to maximize performance],
     )
 )
 
@@ -269,26 +273,26 @@
     ),
     location : "Waterloo, ON, CA",
     description : (
-        [Designed pipelines for data cleaning and analysis; integrated new *SQL* data warehouse],
+        [Engineered *Clustering* + *SVM* + *Random Forest* ensemble models to replace existing LSTMs, reducing inference costs *2x* while maintaining prediction accuracy],
         [Increased prediction accuracy from *40%* to *80%* on existing *LSTM* models with feature engineering, hyperparameter optimization, and automated data cleaning (*Python*, *SQL*)],
-        [Created *Embeddings* + *SVM* + *Random Forest* ensemble models to replace existing LSTM models, reducing inference costs *2x* while maintaining prediction accuracy],
+        [Designed pipelines for data cleaning and analysis and integrated new *SQL* data warehouse],
     )
 )
 
-// #let robarts = experience(
-//     title : "Software Engineer - Bioinformatics",
-//     company : "Robarts Research Institute",
-//     dates : (
-//         start : "Jan 2021",
-//         end : "Apr 2021",
-//     ),
-//     location : "London, ON",
-//     description : (
-//         // [Developed software for migration of genetic analysis database from GRCh37 to GRCh38],
-//         // [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
-//         // [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
-//     )
-// )
+#let robarts = experience(
+    title : "Software Engineer - Bioinformatics",
+    company : "Robarts Research Institute",
+    dates : (
+        start : "Jan 2021",
+        end : "Apr 2021",
+    ),
+    location : "London, ON",
+    description : (
+        [Developed software for migration of genetic analysis database from GRCh37 to GRCh38],
+        [Developed software in *Python* & *SQL* for existing genetics analysis pipeline],
+        [Resolved bugs in existing lab software (*Perl*, *Python*, *C\#*)],
+    )
+)
 
 #let oicr = experience(
     title : "Software Engineer - Bioinformatics",
@@ -309,10 +313,24 @@
     )
 )
 
+#let synthesizer = experience(
+    title : "Hybrid Music Synthesizer",
+    website : "https://github.com/kunalchandan/OpenWave/",
+    description : (
+        [Designed and fabricated a hybrid synthesizer for realtime music synthesis; digital synthesis on Teensy 4.1 Cortex-M7 MCU and analog synthsis using *ADC/DAC* and analog filters],
+        [Designed PCB in *KiCAD*, wrote UI and audio processing code using *Rust*],
+        [*RTIC* (*RTOS* library) used to manage concurrency on MCU, *Slint* library used to manage UI on display; priority based scheduling used to prevent timing conflicts between UI updates, audio synthesis, and input handling],
+        [Developed custom digital signal processing (DSP) modules for oscillators, filters, and envelope generators in Rust, optimizing for *low latency* and *high throughput*],
+        [Achieved sub-millisecond latency and low power consumption while maintaining high (24-bit) quality audio],
+        [Applied real-time audio synthesis techniques, including wavetable synthesis, FM synthesis, and subtractive synthesis, to generate a wide range of sounds and effects],
+    )
+)
+
 #let risc_v_core = experience(
     title : "Pipelined Risc-V Core",
     description : (
         [Designed 5-stage pipelined *RISC-V* 32-bit core in *Verilog* using only synthesizable constructs],
+        [Added pipeline registers and feedback/data-forwarding paths to optimize performance for branching, memory and write-back operations],
         [Core synthesized on *FPGA* and successfully ran branching and recursive algorithms. Testbenches used to ensure cycle accuracy],
     )
 )
@@ -321,7 +339,8 @@
     title : "C++ Compiler for C++ like Language",
     website : "https://github.com/kunalchandan/RajLang/",
     description : (
-        [Wrote lexer and compiler to generate *RISC-V* assembly for custom programming language, used Spike-sim to verify correctness of assembly],
+        [Designed a lexical tokenizer and compiler in *C++* to generate *RISC-V* assembly for custom programming language],
+        [Used _Spike_ RISC-V simulator to verify correctness of assembly],
         [Used *CMake* (build management tool), *Catch* (unit-testing framework), *Boost* (graph library/dotviz generator)],
     )
 )
@@ -357,21 +376,22 @@
 )
 
 #let education = experience(
-    title : "University of Waterloo -- B.A.Sc Electrical Engineering '23",
+    title : "University of Waterloo -- B.A.Sc Electrical Engineering 2018 - 2023",
     description : (
-        [Key Courses: Electronic devices, semiconductor physics, analog/digital integrated circuits, analog/digital/multivariable control systems],
+        // [Key Courses: Electronic devices, semiconductor physics, analog/digital integrated circuits, multivariable control systems],
+        [Key Courses: *Computer Architecture*, Multivariable Control Systems, Analog/Digital Integrated Circuits],
         [Select Awards and Certifications: Baylis Medical Capstone Design Award, #link("https://qnfcf.uwaterloo.ca/", "QNFCF") and #link("https://uwaterloo.ca/giga-to-nanoelectronics-centre/lab-equipment", "G2N") Cleanroom Certifications],
     )
 )
-#box(height: 1.7cm,
+#box(height: 1.0cm,
     columns(1, gutter: 5pt)[
-        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Libraries:])
-        #libraries
-
         #text(weight: "medium", size : heading_font_size, fill : accent_1, [Languages:])
         #languages
 
-        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Software:])
+        // #text(weight: "medium", size : heading_font_size, fill : accent_1, [Libraries:])
+        // #libraries
+
+        #text(weight: "medium", size : heading_font_size, fill : accent_1, [Tools:])
         #software
         // #text(weight: "medium", size : heading_font_size, fill : accent_1, [Lab Tools:])
         // #lab_tools
@@ -385,25 +405,50 @@
 
     // = Summary of Qualifications
     // #Summary_Quals
-#box(height: 23.6cm,
+#box(height: 23.4cm,
     columns(1, gutter: 10pt)[
     = Experience
     #nvidiac
-    #uw_yash
     #groq_inc
+    // #uw_yash
     #huawei
-    // #enphase
-    // #mappedin
+    #mappedin
     #uw_wong
+    #enphase
     // #oicr
-    = Projects
-    #compiler
-    #msa_dna
-    #ray_tracing
-    #risc_v_core
-    #hearing_aid
     = Education
     #education
+    ]
+)
+
+
+#pagebreak()
+
+#page_heading(
+    name : (
+        first : "Kunal's",
+        last  : "Portfolio",
+        email : "kchandan@uwaterloo.ca",
+        phone : "814-807-7652",
+        github : "kunalchandan",
+        linkedin : "kunal-chandan",
+        caption : "B.A.Sc Honours Electrical Engineering '23",
+        // caption : "University of Waterloo",
+        subcaption : "",
+        // subcaption : "B.A.Sc Honours Electrical & Computer Engineering",
+        website : "chandan.one"
+    )
+)
+
+#box(height: 23.6cm,
+    columns(1, gutter: 10pt)[
+    = Projects
+    #compiler
+    #ray_tracing
+    #hearing_aid
+    #risc_v_core
+    #msa_dna
+    #synthesizer
     ]
 )
 
